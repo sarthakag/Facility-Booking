@@ -14,9 +14,13 @@ public class FacilityService {
 	@Autowired
 	private FacilityRepository facilityRepository;
 	
-	public List<Facility> findByVenue()
+//	public List<Facility> getFacilities(int id)
+//	{
+//		return this.facilityRepository.findByVf(id);
+//	}
+	public List<Facility> getAll()
 	{
-		return this.facilityRepository.findByVf();
+		return this.facilityRepository.findAll();
 	}
 
 }

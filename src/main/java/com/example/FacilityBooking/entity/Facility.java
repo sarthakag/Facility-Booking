@@ -18,10 +18,10 @@ public class Facility {
     private Long id;
 	
 	private String name;
-	
-	@OneToMany(targetEntity=Slot.class, cascade= CascadeType.ALL)	
-	@JoinColumn(name="fs",referencedColumnName="id")
-	private List<Slot> bookedSlots;
+//	
+//	@OneToMany(targetEntity=Slot.class, cascade= CascadeType.ALL)	
+//	@JoinColumn(name="fs",referencedColumnName="id")
+//	private List<Slot> bookedSlots;
 
 	public String getName() {
 		return name;

@@ -8,7 +8,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity(name="Facility")
 public class Facility {
@@ -18,10 +21,14 @@ public class Facility {
     private Long id;
 	
 	private String name;
+	
+	private Long venueId;
+	
 //	
 //	@OneToMany(targetEntity=Slot.class, cascade= CascadeType.ALL)	
 //	@JoinColumn(name="fs",referencedColumnName="id")
 //	private List<Slot> bookedSlots;
+	
 
 	public String getName() {
 		return name;
@@ -30,6 +37,11 @@ public class Facility {
 	public void setName(String name) {
 		this.name = name;
 	}
+
+	public void setVenueId(Long venueId) {
+		this.venueId = venueId;
+	}
+	
 	
 
 }

@@ -19,10 +19,19 @@ public class Venue {
 	
 	private String name;
 	
-	@OneToMany(targetEntity=Facility.class, cascade= CascadeType.ALL)	
-	@JoinColumn(name="vf",referencedColumnName="id")
-	private List<Facility> facilities;
+//	@OneToMany(targetEntity=Facility.class, cascade= CascadeType.ALL)	
+//	@JoinColumn(name="VenueId",referencedColumnName="id")
+//	private List<Facility> facilities;
 
+	public Venue(Long venueId, String name)
+	{
+		this.id = venueId;
+		this.name = name;
+	}
+	public Venue()
+	{
+		
+	}
 	public String getName() {
 		return name;
 	}

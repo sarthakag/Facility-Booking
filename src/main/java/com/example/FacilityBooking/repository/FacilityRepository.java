@@ -12,5 +12,7 @@ public interface FacilityRepository extends JpaRepository<Facility,Long> {
 //	@Query("Select f.name from Facility f join Venue v")
 //	public List<Facility> findByVf(int id);
 	
+	public List<Facility> findByVenueId(Long id);
+	
 
 }

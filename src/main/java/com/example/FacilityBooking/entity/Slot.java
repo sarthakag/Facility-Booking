@@ -12,8 +12,9 @@ public class Slot {
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
-	Time start;
-	Time end;
+	private int id;
+	
+//	Time start;
+//	Time end;
 
 }
